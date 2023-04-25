@@ -1,2 +1,2 @@
 # to-do-list
-At lsit give me star pls
+At least give me star pls
