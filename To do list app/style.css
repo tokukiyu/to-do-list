@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #5a5aff; /* blue */
+  --primary-hover: #5a5aff8e;
+  --secondary-color: white; /* red */
+  --tertiary-color: #eeeeee; /* light gray */
+  --quaternary-color: #95b7df; /* dark gray */
+  --background-color: white; /* off-white */
+  --color-danger: #dc493a;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+/*NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #5a5aff;
+  padding: 3px;
+  color: white;
+  border-bottom: 1px solid var(--quaternary-color);
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 99.7%;
+  position: fixed;
+  font-size: larger;
+  border-radius: 0px 0px 10px 10px;
+}
+nav i {
+  padding: 2px 5px;
+  cursor: pointer;
+}
+nav i:hover {
+  border-radius: 3px;
+  background-color: rgba(238, 219, 219, 0.185);
+  background-size: contain;
+}
+.fa-trash:hover {
+  color: #dc493a;
+}
+.container {
+  width: 99vw;
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: var(--tertiary-color);
+}
+
+/* LEFT SECTION */
+.left-section {
+  position: fixed;
+  border-radius: 0px 5px 0px 5px;
+  width: 18%;
+  z-index: 10;
+  top: 37px;
+  left: 0;
+  height: 100%;
+  background-color: var(--secondary-color);
+}
+
+task-card form {
+  display: flex;
+}
+
+.left-section h3 {
+  margin-top: 2rem;
+}
+
+.search i,
+input {
+  border: none;
+}
+
+#search {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  border: none;
+  padding: 2px 3px;
+  height: 1.5rem;
+  border-radius: 3px;
+}
+
+.fa-search {
+  border: none;
+  color: black;
+  margin-left: 5px;
+}
+
+.category p {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  padding: 5px 0;
+}
+
+.category p:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #fff;
+
+  user-select: none;
+}
+
+.category i {
+  border: none;
+  background-color: rgba(100, 87, 110, 0);
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.myday {
+  background-color: var(--primary-color);
+}
+
+.category hr {
+  border: 1px solid #000000;
+  border-top: none;
+}
+
+.left-section h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  padding: 2px 0;
+}
+/* Middle section */
+.middle-section {
+  position: relative;
+  left: 20%;
+  top: 30px;
+  width: 78%;
+  height: 100vh;
+  min-height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: white;
+  border-radius: 5px 0 0 0;
+  margin-top: 2px;
+  padding: 5px;
+  padding-right: 10px;
+  margin-right: 100px;
+}
+
+.add-Remove {
+  background-color: var(--tertiary-color);
+}
+
+.task-card {
+  background-color: var(--quaternary-color);
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 50px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin: 3px;
+}
+
+.task-card input[type="checkbox"] {
+  outline-style: solid;
+  height: max-content;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline-style: hidden;
+  outline-color: var(--primary-color);
+  outline-width: 2px;
+}
+
+.add-Remove:hover,
+.task-card:hover {
+  background-color: var(--primary-hover);
+}
+
+.task-card .priority {
+  font-size: larger;
+  transform: translateY(3px);
+  color: var(--tertiary-color);
+  margin-left: auto;
+}
+
+.task-card .priority:hover {
+  color: rgba(0, 0, 0);
+}
+
+.muted-text {
+  font-size: small;
+  margin-left: 3%;
+  width: 85px;
+}
+.date-time {
+  display: flex;
+}
+/* Add new task */
+/*ADD NEW TASK */
+#addNewTask {
+  z-index: 4;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  border-radius: 1rem;
+  bottom: 4rem;
+  left: 2px;
+  min-height: 7%;
+  height: fit-content;
+  border: none;
+  background-color: var(--primary-color);
+  min-width: 10vw;
+  width: fit-content;
+}
+.addtask .fa-solid {
+  font-size: larger;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 2px;
+  margin-right: 5px;
+}
+
+#addNewInput {
+  display: none;
+  outline-color: var(--primary-color);
+  position: absolute;
+  bottom: 4rem;
+  width: 98%;
+  height: 7%;
+  border: 1px solid #000000;
+  border-radius: 0.5rem;
+  padding-left: 20px;
+  background-color: var(--tertiary-color);
+}
+#addNewInput::placeholder {
+  padding: 5px 2px;
+}
+.date {
+  display: none;
+  background: transparent;
+  border: none;
+  position: absolute;
+  bottom: 4rem;
+  right: 8rem;
+  height: 7%;
+  margin: 0 10px;
+  color: var(--text-color);
+}
+.time {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
+  height: 7%;
+  margin: 0 10px;
+}
+
+/*completed task*/
+.completed {
+  margin-top: 20px;
+}
+.completed .task-title {
+  text-decoration: line-through;
+}
+.completed input[type="checkbox"] {
+  display: none;
+}
+
+/***/
+
+/*RIGHT SECTION*/
+.right-section {
+  z-index: 20;
+  position: fixed;
+  height: 100%;
+  padding: 10px;
+  top: 37px;
+  display: none;
+  min-width: 20vw;
+  max-width: 20%;
+  right: 0%;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+.task-detail {
+  width: 100%;
+  margin: 3px;
+  height: max-content;
+  display: block;
+  background-color: var(--background-color);
+}
+
+/*RESPONSIVINNES IMPELEMENTATION*/
+/*OVERLAY*/
+.overlay {
+  background-color: rgba(0, 0, 0, 0.568);
+  z-index: 4;
+  left: 0;
+  position: fixed;
+  transition: 100ms ease-in-out;
+  top: 0;
+  opacity: 1;
+  min-width: 100vw;
+  min-height: 100vh;
+  pointer-events: all;
+}
+@media screen and (max-width: 750px) {
+  .middle-section {
+    width: 97%;
+    margin-left: 2px;
+    right: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-house"></i>
+      </div>
+      <div>
+        <i class="fa-solid fa-trash"></i>
+      </div>
+    </nav>
+    <div id="container" class="container">
+      <div id="overlay"></div>
+
+      <div id="sidebar" class="left-section">
+        <h3>YOUR TASKS</h3>
+        <div class="search">
+          <form class="search">
+            <input type="text" placeholder="Search taks.." id="search" />
+            <i  class="fa fa-search"></i>
+          </form>
+        </div>
+        <div class="category">
+          <p class="listAll">
+            <i class="fa-regular fa-sun"></i>
+            my day
+          </p>
+
+          <p class="important">
+            <i class="fa-regular fa-star"></i>
+            important
+          </p>
+
+          <p>
+            <i class="fa-solid fa-house"></i>
+            home
+          </p>
+
+          <hr />
+        </div>
+      </div>
+      <div class="middle-section">
+        <div class="new-taskList"></div>
+        <div>
+          <h3 class="done">completed</h3>
+          <div id="completed" class="completed"></div>
+        </div>
+        <div class="addTask-bar">
+          <div class="addtask">
+            <button type="button" id="addNewTask">
+              <i class="fa-solid fa-plus"></i> ADD TASK
+            </button>
+          </div>
+          <div class="inputInfo"></div>
+          <div class="inputarea">
+            <form class="form">
+              <input
+                type="text"
+                placeholder="Add new task"
+                class="title"
+                id="addNewInput"
+              />
+              <input class="date" type="date" />
+              <input class="time" type="time" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="right-section">
+        <button onclick="closeit()">close me</button>
+      </div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
